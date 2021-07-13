@@ -136,6 +136,13 @@ public class WeChatAuthUtils {
         }
     }
 
+    /**
+     * 获取用户信息
+     * @param accessToken 授权信息
+     * @return 用户信息
+     * @throws IOException
+     * @Description 40014 错误编码 ： accessToken过期
+     */
     public static WeChatUserInfo getUserInfo(AccessToken accessToken) throws IOException {
         String url = USER_INFO_URL;
         if (accessToken != null) {
